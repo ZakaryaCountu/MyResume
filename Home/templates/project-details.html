@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+  <main id="main">
+
+    <!-- ======= Portfolio Details ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-4 ml-5">
+            <h2 class="portfolio-title">{{project_detail.title}}</h2>
+            <div>
+              <img src="{{project_detail.image.url}}" class="img-fluid" style="height: 30em;" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-6 portfolio-info mt-5 mx-auto">
+            <h3>Project informations</h3>
+            <ul>
+              <li><strong>Category</strong>: {{project_detail.category.name}}</li>
+              <li><strong>Client</strong>: {{project_detail.client.name}}</li>
+              <li><strong>Project date</strong>:{{project_detail.created_at|date:'d M, o' }}</li>
+              <li><strong>Project URL</strong>: <a href="#">{{project_detail.url}}</a></li>
+            </ul>
+
+            <p class="mt-5">
+              {{project_detail.description}}
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details -->
+
+  </main><!-- End #main -->
+
+  {% endblock body %}
+
+
