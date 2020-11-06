@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+     <html lang="en">
+     
+     <head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+     
+       <title>successfully</title>
+     
+       <!-- Google font -->
+       <link href="https://fonts.googleapis.com/css?family=Kanit:200" rel="stylesheet">
+     
+       <!-- Font Awesome Icon -->
+       <link type="text/css" rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+     
+       <!-- Custom stlylesheet -->
+       <link type="text/css" rel="stylesheet" href="{% static 'css/Style_PAcess.css' %}" />
+     
+       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+       <!--[if lt IE 9]>
+           <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+         <![endif]-->
+     
+     </head>
+     
+     <body>
+     
+       <div id="access">
+         <div class="access">
+           <div class="access-404">
+             <h1>Done</h1>
+           </div>
+           <h2>Your message has been sent. Thank you!</h2>
+           <p>We hope to serve you appropriately and to your satisfaction. <a href="{% url 'ResumePage:Resume' %}">Return to homepage</a></p>
+           <div class="access-social">
+             <a href="https://www.facebook.com/zakariya.laarrague.7/"><i class="fa fa-facebook"></i></a>
+             <a href="https://twitter.com/LAARRAGUEZakar1"><i class="fa fa-twitter"></i></a>
+             <a href="#"><i class="fa fa-linkedin"></i></a>
+             <a href="https://www.youtube.com/channel/UCufgJjUKQML-saIHBJTYPUA?view_as=subscriber"><i class="fa fa-youtube"></i></a>
+           </div>
+         </div>
+       </div>
+     
+     </body>
+     
+     </html>
+          

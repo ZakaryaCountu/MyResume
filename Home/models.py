@@ -173,3 +173,31 @@ class Service(models.Model):
 
   def __str__(self):
     return self.title
+
+
+#TESTIMONIALS Page ::
+def Image_upload2(instance,filename) :
+    imagename,extension = filename.split(".")
+
+    return "TESTIMONIALS/%s.%s"%(instance.id,extension)
+
+class TESTIMONIALS(models.Model):
+ name = models.CharField(max_length=80)
+ work = models.CharField( max_length=80)
+ image = models.ImageField( upload_to=Image_upload2)
+ description = models.TextField(max_length=1000)
+
+ def __str__(self):
+   return self.name
+
+
+
+#Contact page ::
+class Info(models.Model):
+    location = models.CharField( max_length=60)
+    phone_number = models.CharField(max_length = 10)
+    email = models.EmailField(max_length=254)
+
+
+    def __str__(self):
+       return self.email
